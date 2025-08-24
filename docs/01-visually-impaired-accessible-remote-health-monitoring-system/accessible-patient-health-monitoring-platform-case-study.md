@@ -4,11 +4,10 @@ Case Study •AWS Solutions Architect, HIPAA, UX Research, Wireframing
 
 # **Executive Summary**
 
-Goal: Design and architect a HIPAA-aligned remote health monitoring platform for visually-impaired and low-vision users that ingests wearable vitals (BP, glucose, SpO₂, HR) and provides accessible, privacy-preserving feedback (voice \+ haptics) while enabling clinicians to act on AI-driven anomaly alerts.
+Goal: Design and architect a HIPAA-aligned remote health monitoring platform for visually-impaired and low-vision users that ingests wearable vitals (BP,HR) and provides accessible, privacy-preserving feedback (voice \+ haptics) while enabling clinicians to act on AI-driven anomaly alerts.
 
 My Role: End-to-end: secondary/desk research, accessibility-first UX, IA & wireframes, high‑fidelity UI spec, AWS architecture, data model, HIPAA mapping, success metrics.
 
-Outcome (simulated): Prototype demonstrates \<2s latency from device → voice feedback, accessible flows pass basic VoiceOver/TalkBack checks, and AI rules surface outliers to providers.
 
 # **Problem & Context**
 
@@ -142,12 +141,47 @@ Flow C – History: User requests last 3 readings → Spoken summaries.
 
 For a detailed design, click [here](DESIGN.md).
 
-Ingestion: Wearable → AWS IoT Core (mutual TLS)  
-Processing: AWS Lambda (validation \+ anomaly checks)  
-Storage: DynamoDB (encrypted with KMS)  
-APIs: API Gateway with Cognito auth  
-Voice: Amazon Polly (TTS)  
-Notifications: SNS (voice \+ haptics)
+Internet Gateway – Enables communication between resources in a VPC and the internet.
+
+AWS WAF (Web Application Firewall) – Protects web applications from common exploits like SQL injection and XSS.
+
+Amazon Cognito – Provides secure user sign-up, sign-in, and access control for web and mobile apps.
+
+Amazon API Gateway – Manages and scales APIs by handling authorization, throttling, and monitoring.
+
+AWS IoT Core – Connects IoT devices securely to the cloud for real-time data processing.
+
+AWS Amplify – A development platform to quickly build, host, and scale full-stack web and mobile apps.
+
+AWS Lambda – Runs code without provisioning servers, triggered by events or API calls.
+
+Amazon Kinesis Data Streams – Captures and processes real-time streaming data at scale.
+
+Amazon S3 (Simple Storage Service) – Object storage for files, backups, and big data with high durability.
+
+NAT Gateway – Allows private subnet resources to securely access the internet.
+
+Amazon EventBridge – Event bus that connects applications via real-time event-driven architecture.
+
+Amazon DynamoDB – Fully managed NoSQL database with fast, predictable performance.
+
+AWS Lake Formation – Simplifies building, securing, and managing data lakes.
+
+Amazon QuickSight – Business intelligence tool for creating interactive dashboards and visualizations.
+
+Amazon SNS (Simple Notification Service) – Pub/Sub messaging service for notifications and system-to-system messaging.
+
+Amazon Athena – Interactive query service that analyzes S3 data using SQL.
+
+AWS CloudTrail – Tracks and logs all API activity across your AWS account for governance and auditing.
+
+Amazon GuardDuty – Threat detection service that monitors for malicious or unauthorized activity.
+
+Amazon CloudWatch Logs – Collects and monitors log files from applications and AWS resources.
+
+Amazon CloudWatch Alarms – Sends alerts based on CloudWatch metrics or thresholds.
+
+Amazon CloudWatch – Monitors resources, collects metrics, and provides observability into AWS applications.
 
 # **Rollout Plan**
 
@@ -155,9 +189,4 @@ Notifications: SNS (voice \+ haptics)
 • Beta: 10–15 visually-impaired/low-vision participants \+ 2 clinicians.  
 • General: Documentation, training, support playbooks.
 
-# **Next Steps**
 
-• Phase 2: ML anomaly detection (SageMaker)  
-• EHR integration via FHIR APIs  
-• Android TalkBack parity \+ multilingual TTS  
-• Privacy-preserving analytics
