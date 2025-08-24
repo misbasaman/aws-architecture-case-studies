@@ -55,11 +55,11 @@ Visually-impaired users often rely on voice-based interfaces, making the encrypt
 
 #### **Persona 1 – Patient (Visually Impaired)**
 
-![](../images/persona%20-%20blind.png)
+![](../images/Persona-David.png)
 
 **Persona 2 – Healthcare Provider**
 
-![](../images/persona%20-%20Nurse.png)
+![](../images/Persona%20-%20Nurse.png)
 
 **Empathy Map – David (Visually-impaired Patient)**
 
@@ -71,7 +71,7 @@ Visually impaired patients lack an accessible, HIPAA-compliant way to monitor vi
 
 1\. **User Journey Map**
 
-![](../images/ChatGPT%20Image%20Aug%2015,%202025,%2002_57_27%20PM.png)
+![](../images/User_Journey_Map%20(1).png)
 
 (Scenario: David checks his vitals using a wearable and the app)
 
@@ -80,14 +80,14 @@ Visually impaired patients lack an accessible, HIPAA-compliant way to monitor vi
 
 2\. **Low-Fidelity Wireframes**
 
-#### **![](../images/ChatGPT%20Image%20Aug%2015,%202025,%2004_18_27%20PM.png)
+#### **![](../images/Lo-Fi%20Wireframe.png)
 
 | Screen 1 – Home Large central button: “Check My Vitals”. Voice prompt auto-reads menu. Haptic feedback when button is focused. | Screen 2 – Readings Minimal visual clutter; high contrast text. Automatic audio readout: “Blood pressure 120 over 80\. Heart rate 72.” Button: “Repeat Reading” (also voice-activated).  | Screen 3 – Alert Vibration \+ bold text. Voice: “Your oxygen level is low. Calling your provider.” Option: Cancel Alert (voice command).  | Screen 4 – History List view with large spacing. Voice summary for each entry. Filter by date with voice input. |
 | :---- | :---- | :---- | :---- |
 
 **High-Fidelity Wireframes**
 
-**![](../images/Screenshot%202025-08-19%20110321.png)
+**![](../images/Hi-Fi%20Wireframe.png)
 
 Why Privacy Settings Matter
 
