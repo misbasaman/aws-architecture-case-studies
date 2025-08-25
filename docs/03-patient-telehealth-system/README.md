@@ -1,6 +1,6 @@
-# 🏥 Telehealth Platform – AWS Well-Architected, HIPAA & FHIR-Compliant
+# Telehealth Platform – AWS Well-Architected, HIPAA & FHIR-Compliant
 
-## 📌 Overview
+## Overview
 
 This repository presents a reference architecture for a HIPAA-ready telehealth system that enables:
 
@@ -10,7 +10,7 @@ This repository presents a reference architecture for a HIPAA-ready telehealth s
 
 The solution is designed following the AWS Well-Architected Framework with the Healthcare Industry Lens, leveraging only HIPAA-eligible services.
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Telehealth systems must balance scalability, compliance, and usability. Common challenges include:
 
@@ -21,7 +21,7 @@ Telehealth systems must balance scalability, compliance, and usability. Common c
 
 This project demonstrates how to solve these challenges using AWS services.
 
-## 🏗️ Architecture
+## Architecture
 
 ![](../images/patient-telehealth-services.png)
 
@@ -37,7 +37,7 @@ This project demonstrates how to solve these challenges using AWS services.
 8. **SNS/SQS** send reminders & event notifications.
 9. **CloudTrail, CloudWatch, GuardDuty, Security Hub, Config** provide audit, monitoring, and compliance guardrails.
 
-## 🧩 AWS Services Used
+## AWS Services Used
 | Layer         | Service                           | Purpose                                            | HIPAA Eligible |
 | ------------- | --------------------------------- | -------------------------------------------------- | -------------- |
 | Edge Security | CloudFront + WAF                  | Protect apps from DDoS/OWASP threats               | ✅              |
@@ -52,14 +52,14 @@ This project demonstrates how to solve these challenges using AWS services.
 | Security      | IAM, KMS, GuardDuty, Security Hub | Encryption, least privilege, threat detection      | ✅              |
 | Monitoring    | CloudTrail, CloudWatch, Config    | Audit logging & compliance                         | ✅              |
 
-## 🔐 HIPAA & FHIR Compliance
+## HIPAA & FHIR Compliance
 
 - HIPAA: Only HIPAA-eligible services used. Requires a signed BAA with AWS.
 - Encryption: All data encrypted in transit (TLS 1.2+) and at rest (KMS CMKs).
 - Audit: CloudTrail + HealthLake versioning provide full audit trails.
 - FHIR: HealthLake stores FHIR R4 resources (Patient, Encounter, MedicationRequest, DocumentReference, Observation, Provenance).
 
-## 🚀 MVP vs. Full-Scale Deployment
+## MVP vs. Full-Scale Deployment
 
 - **MVP Phase**
   - Cognito auth
@@ -74,8 +74,9 @@ This project demonstrates how to solve these challenges using AWS services.
   - Multi-tenant partitioning (cross-organization isolation)
   - QuickSight dashboards on de-identified data
 
-## ⚠️ Disclaimers
+## Disclaimers
 
 - This repository is a reference design and does not itself process PHI.
 - Deployment requires a signed AWS BAA and strict adherence to HIPAA shared responsibility model.
 - IaC templates (CloudFormation/Terraform) will be added in later phases.
+
