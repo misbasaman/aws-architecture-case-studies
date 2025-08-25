@@ -74,18 +74,6 @@ This project demonstrates how to solve these challenges using AWS services.
   - Multi-tenant partitioning (cross-organization isolation)
   - QuickSight dashboards on de-identified data
 
-## 📂 Repo Structure
-
-```graphql
-telehealth-aws-architecture/
-├── diagrams/                 # Architecture diagrams (Lucidchart/PNG)
-├── docs/                     
-│   ├── HIPAA-notes.md        # HIPAA responsibilities & BAA requirements
-│   ├── FHIR-model.md         # Resources used & rationale
-│   └── Well-Architected.md   # Mapping to AWS Well-Architected Framework
-└── README.md                 # This file
-```
-
 ## ⚠️ Disclaimers
 
 - This repository is a reference design and does not itself process PHI.
