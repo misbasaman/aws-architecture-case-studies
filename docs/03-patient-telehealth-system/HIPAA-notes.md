@@ -1,11 +1,11 @@
-# 🔐 HIPAA Notes – AWS Telehealth Architecture
+# HIPAA Notes – AWS Telehealth Architecture
 
-## 📌 Overview
+## Overview
 This document outlines how the proposed telehealth architecture addresses **HIPAA compliance** within the AWS Shared Responsibility Model. It highlights what AWS is responsible for, and what the customer (you/your org) must enforce.
 
 ---
 
-## 🧩 HIPAA Shared Responsibility Model
+## HIPAA Shared Responsibility Model
 
 - **AWS Responsibility**  
   - Physical security of data centers  
@@ -21,7 +21,7 @@ This document outlines how the proposed telehealth architecture addresses **HIPA
 
 ---
 
-## ✅ HIPAA-Eligible Services in this Architecture
+## HIPAA-Eligible Services in this Architecture
 - **Amazon CloudFront** (with AWS WAF)  
 - **Amazon Cognito**  
 - **Amazon API Gateway**  
@@ -36,7 +36,7 @@ This document outlines how the proposed telehealth architecture addresses **HIPA
 
 ---
 
-## 🔐 Data Protection Controls
+## Data Protection Controls
 
 - **Encryption in Transit:** TLS 1.2+ enforced end-to-end  
 - **Encryption at Rest:** AWS KMS CMKs used across S3, Aurora, HealthLake, Chime artifacts (if stored)  
@@ -47,7 +47,7 @@ This document outlines how the proposed telehealth architecture addresses **HIPA
 
 ---
 
-## 📝 Logging & Auditing
+## Logging & Auditing
 
 - **CloudTrail**: Logs all API calls, delivered to encrypted S3  
 - **CloudWatch Logs**: Application logs for Lambda & API Gateway  
@@ -57,7 +57,7 @@ This document outlines how the proposed telehealth architecture addresses **HIPA
 
 ---
 
-## ⚠️ Key Caveats
+## Key Caveats
 
 - **Must sign a BAA in AWS Artifact** before using PHI in workloads  
 - **HIPAA-eligible ≠ HIPAA-compliant** — correct configurations are mandatory  
@@ -66,7 +66,8 @@ This document outlines how the proposed telehealth architecture addresses **HIPA
 
 ---
 
-## 📌 References
+## References
 - [AWS HIPAA Eligibility and Services](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/)  
 - [AWS Artifact (BAA)](https://aws.amazon.com/artifact/)  
 - [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)  
+
