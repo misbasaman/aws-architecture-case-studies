@@ -1,12 +1,12 @@
-# 📄 Case Study: AWS Well-Architected Telehealth Platform
+# Case Study: AWS Well-Architected Telehealth Platform
 
-## 📌 Executive Summary
+## Executive Summary
 
 This case study presents a **HIPAA-ready telehealth solution** designed using the **AWS Well-Architected Framework**. The platform enables **patients** to book appointments, view prescriptions, and attend secure telehealth sessions, while **providers** manage medical records, notes, and prescriptions.
 
 By leveraging **HIPAA-eligible AWS services** and adhering to **FHIR R4 standards**, the system ensures compliance, scalability, and interoperability for modern healthcare delivery.
 
-## 🎯 Problem Statement
+## Problem Statement
 
 The healthcare industry faces rising demand for **secure, remote care delivery**. Traditional EHR and scheduling systems often fail to meet the needs of:
 
@@ -14,7 +14,7 @@ The healthcare industry faces rising demand for **secure, remote care delivery**
 - **Providers**: secure access to medical history, appointment management, real-time documentation.
 - **Organizations**: ensuring compliance with **HIPAA regulations** and **FHIR interoperability** standards.
 
-## 🏗️ Solution Overview
+## Solution Overview
 
 The proposed architecture is designed with **AWS HIPAA-eligible services**, ensuring **PHI protection, interoperability,** and **operational efficiency**.
 
@@ -25,18 +25,18 @@ The proposed architecture is designed with **AWS HIPAA-eligible services**, ensu
 - **Telehealth Sessions**: Amazon Chime SDK for HIPAA-ready video calls.
 - **Compliance & Monitoring**: KMS, CloudTrail, GuardDuty, and Security Hub ensure full security visibility.
 
-## 📊 Architecture Diagram
+## Architecture Diagram
 
 ![](../images/patient-telehealth-services.png)
 
-## 🔐 Compliance Considerations
+## Compliance Considerations
 
 - **HIPAA**: All services are **HIPAA-eligible** under AWS BAA. Data encrypted at rest (KMS CMKs) and in transit (TLS 1.2+).
 - **FHIR Alignment**: HealthLake ensures **HL7 FHIR R4 compliance** for data exchange.
 - **Auditability**: HealthLake resource versioning + CloudTrail logs ensure immutability and transparency.
 - **Shared Responsibility**: Customer responsible for IAM policies, PHI access control, breach notification.
 
-## 📌 Mapping to AWS Well-Architected Pillars
+## Mapping to AWS Well-Architected Pillars
 | Pillar                     | Implementation Highlights                                    |
 | -------------------------- | ------------------------------------------------------------ |
 | **Operational Excellence** | CloudWatch + CloudTrail logging, Config for compliance drift |
@@ -46,7 +46,7 @@ The proposed architecture is designed with **AWS HIPAA-eligible services**, ensu
 | **Cost Optimization**      | Pay-per-use Lambda/API Gateway, S3 lifecycle to Glacier      |
 | **Sustainability**         | Serverless + auto-scaling to minimize idle resources         |
 
-## 🚀 Roadmap
+## Roadmap
 
 ### Phase 1 (MVP):
 
@@ -60,11 +60,12 @@ The proposed architecture is designed with **AWS HIPAA-eligible services**, ensu
 - QuickSight dashboards on de-identified FHIR data
 - Chaos Engineering for resilience testing
 
-## ✅ Key Takeaways
+## Key Takeaways
 
 - Demonstrates **AWS cloud architecture expertise** with focus on **regulated industries (healthcare)**.
 - Balances **scalability, compliance,** and **user experience**.
 - Provides a **real-world healthcare** use case.
 
-👉 This case study is available as part of a **GitHub portfolio project**:
+This case study is available as part of a **GitHub portfolio project**:
 🔗 [GitHub Repository Link Here](https://github.com/misbasaman/aws-architecture-case-studies/tree/main/docs/03-patient-telehealth-system)
+
