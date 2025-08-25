@@ -1,11 +1,11 @@
-# 📊 FHIR Model – Telehealth Architecture
+# FHIR Model – Telehealth Architecture
 
-## 📌 Overview
+## Overview
 This document describes which **FHIR R4 resources** are used in the telehealth solution, and how they map to system capabilities (appointments, prescriptions, medical notes, history).
 
 ---
 
-## 🧩 Core FHIR Resources
+## Core FHIR Resources
 
 | FHIR Resource         | Usage in Telehealth System |
 |------------------------|----------------------------|
@@ -23,7 +23,7 @@ This document describes which **FHIR R4 resources** are used in the telehealth s
 
 ---
 
-## 🔄 Data Flow Examples
+## Data Flow Examples
 
 ### 1. Appointment Booking
 - Patient books an appointment (Aurora transactional entry)  
@@ -44,14 +44,15 @@ This document describes which **FHIR R4 resources** are used in the telehealth s
 
 ---
 
-## ⚖️ Compliance & Audit
+## Compliance & Audit
 - **Versioning:** FHIR resource history in HealthLake ensures changes are tracked  
 - **Provenance:** Links actions (who, when, how) for clinical accountability  
 - **AuditEvent:** Captures access events (view, modify, delete) for compliance  
 
 ---
 
-## 📌 References
+## References
 - [HL7 FHIR R4 Resources](https://www.hl7.org/fhir/resourcelist.html)  
 - [Amazon HealthLake – FHIR Support](https://docs.aws.amazon.com/healthlake/latest/devguide/what-is-healthlake.html)  
 - [AWS Healthcare & Life Sciences Lens](https://docs.aws.amazon.com/wellarchitected/latest/healthcare-industry-lens/healthcare-industry-lens.html)  
+
