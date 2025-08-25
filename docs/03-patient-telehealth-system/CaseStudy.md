@@ -67,4 +67,4 @@ The proposed architecture is designed with **AWS HIPAA-eligible services**, ensu
 - Provides a **real-world healthcare** use case.
 
 👉 This case study is available as part of a **GitHub portfolio project**:
-🔗 [GitHub Repository Link Here]()
+🔗 [GitHub Repository Link Here](https://github.com/misbasaman/aws-architecture-case-studies/tree/main/docs/03-patient-telehealth-system)
